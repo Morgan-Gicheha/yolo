@@ -28,13 +28,15 @@ running the start up command to start the API
 
  building the image.
 -------------------
+docker build -t gicheha/ip_backend:v1.0.0 .
 
 
  pushing the image to dockerhub
  ------------------
-
+docker push gicheha/ip_backend:v1.0.0
 
 
 Running the image locally
 ----------------------------------
 
+docker run -p 5000:5000 docker.io/gicheha/ip_backend:v1.0.0
