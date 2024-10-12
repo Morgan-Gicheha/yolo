@@ -1,0 +1,38 @@
+version: '3'
+services:
+  client-react-app:
+    image: gicheha/ip_frontend:v1.0.0
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    networks:
+      - ip-5-network
+    depends_on:
+      - backend-microservice
+
+  backend-microservice:
+    image: gicheha/ip_backend:v1.0.0
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+
+    depends_on:
+      - mongo-db
+
+  mongo-db:
+    image: mongo:7.0.4
+    ports:
+      - "27017:27017"
+    networks:
+      - ip-5-network
+
+volumes:
+  mongo-data:
+
+networks:
+  ip-5-network:
+    driver: bridge
