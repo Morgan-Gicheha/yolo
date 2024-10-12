@@ -19,7 +19,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
-
+    networks:
+      - ip-5-network
     depends_on:
       - mongo-db
 
@@ -29,6 +30,8 @@ services:
       - "27017:27017"
     networks:
       - ip-5-network
+    volumes:
+      - mongo-data:/data/db
 
 volumes:
   mongo-data:
