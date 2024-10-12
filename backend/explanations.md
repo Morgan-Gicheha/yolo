@@ -1,4 +1,4 @@
-I used FROM node:16-alpine becasue is more or a bare metal version of node, meaning it will save space  in the final resulting image
+This project is built with Node.js and runs on a lightweight Docker image using the `node:16-alpine` base image to minimize the final image size.
 
 
 WORKDIR /app
@@ -22,7 +22,6 @@ exposing port
 CMD ["npm", "start"]
 
 running the start up command to start the API
-
 
 
 
