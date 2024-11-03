@@ -15,6 +15,6 @@
     ports:
       - "80:80"
     networks:
-      - name: ip-5-network
+      - name: app-net
     restart_policy: always
   become: true

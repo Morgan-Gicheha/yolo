@@ -2,12 +2,13 @@
 - name: Pull image from repository
   docker_image:
     name: gicheha/ip_backend
+    tag: v1.0.0
     source: pull
 
 - name: Create Node.js Backend Container
   docker_container:
     name: gicheha-backend
-    image: gicheha/ip_backend
+    image: gicheha/ip_backend:v1.0.0  
     networks:
       - name: app-net
     ports:

@@ -1,0 +1,9 @@
+---
+- name: Set up e-commerce application
+  hosts: all
+  become: true
+
+  roles:
+    - role: database
+    - role: backend
+    - role: frontend
