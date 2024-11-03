@@ -23,8 +23,6 @@ CMD ["npm", "start"]
 
 running the start up command to start the API
 
-
-
  building the image.
 -------------------
 docker build -t gicheha/ip_backend:v1.0.0 .
@@ -39,3 +37,18 @@ Running the image locally
 ----------------------------------
 
 docker run -p 5000:5000 docker.io/gicheha/ip_backend:v1.0.0
+
+
+
+
+
+
+===========================================
+
+=========================================
+
+
+
+
+creating vagrant file
+![alt text](<Screenshot from 2024-11-03 11-32-21.png>)
