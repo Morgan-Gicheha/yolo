@@ -1,0 +1,20 @@
+---
+# roles/frontend/tasks/main.yml
+
+- name: Pull frontend Docker image
+  docker_image:
+    name: gicheha/ip_frontend
+    tag: v1.0.0
+    source: pull
+
+- name: Run frontend Docker container
+  docker_container:
+    name: client-react-app
+    image: gicheha/ip_frontend:v1.0.0
+    state: started
+    ports:
+      - "80:80"
+    networks:
+      - name: ip-5-network
+    restart_policy: always
+  become: true

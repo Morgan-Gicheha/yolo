@@ -1,0 +1,14 @@
+---
+# roles/frontend/tasks/main.yml
+- name: Pull frontend Docker image
+  docker_image:
+    name: your_frontend_image
+    source: pull
+
+- name: Run frontend Docker container
+  docker_container:
+    name: frontend_container
+    image: your_frontend_image
+    state: started
+    ports:
+      - "8080:80"
