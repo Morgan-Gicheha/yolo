@@ -66,3 +66,8 @@ tesing ansible playbook locally
 command to launch playbook
 
 sudo ansible-playbook -i hosts.ini playbook.yml
+
+
+
+accessing the project in the host machin
+![alt text](<Screenshot from 2024-11-03 23-01-01.png>)
