@@ -8,10 +8,8 @@
 - name: Create Node.js Backend Container
   docker_container:
     name: gicheha-backend
-    image: gicheha/ip_backend:v1.0.0  
-    networks:
-      - name: app-net
+    image: gicheha/ip_backend:v1.0.0
+    network_mode: host
     ports:
       - "5000:5000"
-    command: "npm start"
   become: yes

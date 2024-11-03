@@ -60,3 +60,9 @@ vagrant up command
 tesing ansible playbook locally
 
 ![alt text](<Screenshot from 2024-11-03 12-26-35.png>)
+
+
+
+command to launch playbook
+
+sudo ansible-playbook -i hosts.ini playbook.yml

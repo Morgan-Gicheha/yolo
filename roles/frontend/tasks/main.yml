@@ -14,7 +14,6 @@
     state: started
     ports:
       - "80:80"
-    networks:
-      - name: app-net
+    network_mode: host
     restart_policy: always
   become: true
