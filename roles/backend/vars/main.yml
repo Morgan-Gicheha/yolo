@@ -1,4 +1,3 @@
 ---
-container_name: brian-yolo-backend
-network: app-net
-volume: app-mongo-data/app
+backend_docker_image_version: gicheha/ip_backend:v1.0.0
+backend_docker_image:  gicheha/ip_backend

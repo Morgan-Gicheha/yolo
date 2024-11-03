@@ -3,8 +3,8 @@
 
 - name: Pull frontend Docker image
   docker_image:
-    name: gicheha/ip_frontend
-    tag: v1.0.0
+    name: "{{fronted_image}}"
+    tag: "{{fronted_image_version}}"
     source: pull
 
 - name: Run frontend Docker container

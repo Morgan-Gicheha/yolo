@@ -1,14 +1,14 @@
 ---
 - name: Pull image from repository
   docker_image:
-    name: gicheha/ip_backend
+    name: "{{backend_docker_image}}"
     tag: v1.0.0
     source: pull
 
 - name: Create Node.js Backend Container
   docker_container:
     name: gicheha-backend
-    image: gicheha/ip_backend:v1.0.0
+    image: "{{backend_docker_image_version}}"
     network_mode: host
     ports:
       - "5000:5000"

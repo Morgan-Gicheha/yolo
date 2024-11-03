@@ -1,17 +1,17 @@
 ---
 - name: Create Docker network
   docker_network:
-    name: app-net
+    name: "{{mongo_network}}"
     state: present
 
 - name: Run MongoDB Container
   docker_container:
-    name: app-mongo
+    name: "{{mongo_container_name}}"
     image: mongo
     ports:
       - '27017:27017'
     volumes:
-      - ./app-mongo-data:/data/db
+      - "{{mongo_volume}}"
     network_mode: host
   tags:
     - database
