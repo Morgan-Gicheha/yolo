@@ -1,3 +1,12 @@
+# FINAL IP <K8s>
+setting the project ID
+
+`gcloud config set project devopsk8s-441011`
+
+
+
+
+
 # IP
 
 ## Overview
