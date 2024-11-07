@@ -1,4 +1,4 @@
-# IP 
+# IP
 
 ## Overview
 This project demonstrates the use of Vagrant and Ansible to set up a development environment. It includes instructions for creating a Vagrant file, launching the environment, testing Ansible playbooks, and accessing the project from the host machine.
@@ -36,8 +36,7 @@ After creating the Vagrant file, run the following command to start your Vagrant
 ```bash
 vagrant up
 ```
-![alt text](<Screenshot from 2024-11-03 23-06-32.png>)
-
+![alt text](./static/Screenshot%20from%202024-11-03%2023-06-32.png)
 Testing Ansible Playbook Locally
 Once your Vagrant environment is up and running, you can test your Ansible playbook locally by accessing http://localhost:8080/ in the browser
 
@@ -46,7 +45,8 @@ Once your Vagrant environment is up and running, you can test your Ansible playb
 ```
 vagrant Destroy
 ```
-![alt text](<Screenshot from 2024-11-03 23-09-55.png>)
+
+![alt text](./static/Screenshot%20from%202024-11-03%2023-09-55.png)
 
 ## Command to Launch Playbook
 To launch your Ansible playbook in the host machine, use the following command:
@@ -58,4 +58,4 @@ sudo ansible-playbook -i hosts.ini playbook.yml
 ## Accessing the Project in the Host Machine
 After successfully running your playbook, you can access the project in your host machine. Here’s a snapshot of accessing the project.
 
-![alt text](<Screenshot from 2024-11-03 23-08-15.png>)
+![alt text](./static/Screenshot%20from%202024-11-03%2023-08-15.png)
