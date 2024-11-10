@@ -23,12 +23,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
+  name: backend-service
 spec:
   selector:
-    app: frontend
+    app: backend
   ports:
   - protocol: TCP
     port: 80
-    targetPort: 3000
-  type: LoadBalancer
+    targetPort: 5000
+  type: ClusterIP
