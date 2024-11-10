@@ -4,6 +4,10 @@ setting the project ID
 `gcloud config set project devopsk8s-441011`
 
 
+Frontend and Backend: These will typically use Deployment objects since they are stateless.
+Database: If your database requires persistent storage, you can use a StatefulSet to ensure each pod gets a unique, stable identity and its own persistent storage. This can be achieved with PersistentVolume and PersistentVolumeClaim.
+
+
 
 
 
