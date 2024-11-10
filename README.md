@@ -7,9 +7,41 @@ setting the project ID
 Frontend and Backend: These will typically use Deployment objects since they are stateless.
 Database: If your database requires persistent storage, you can use a StatefulSet to ensure each pod gets a unique, stable identity and its own persistent storage. This can be achieved with PersistentVolume and PersistentVolumeClaim.
 
+# confirming GCP configs
+`gcloud config list`
+
+![alt text](<Screenshot from 2024-11-10 08-13-08.png>)
+
+
+# creating GKE cluster
+`gcloud container clusters create [CLUSTER_NAME] --region [REGION] --project [PROJECT_ID]`
+
+`
+gcloud container clusters create devopsk8scluster --region africa-south1-a --project devopsk8s-441011
+`
+![alt text](<Screenshot from 2024-11-10 08-34-15.png>)
+
+### cluster credted in the cloud dashboard
+![alt text](<Screenshot from 2024-11-10 08-53-41.png>)
 
 
 
+## installing auth-plugin1
+
+`sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin1`
+
+##
+applying all files in the k8s folder
+`kubectl apply -f k8s/`
+![alt text](<Screenshot from 2024-11-10 08-47-48.png>)
+
+### Nodes visible in dashboard
+
+![alt text](<Screenshot from 2024-11-10 08-55-22.png>)
+
+### pods visible in dashboard after appling them
+Pod status, the backend pod failed to deploy
+![alt text](<Screenshot from 2024-11-10 08-58-35.png>)
 
 # IP
 

@@ -17,6 +17,9 @@ spec:
         image: gicheha/ip_backend:v1.0.0
         ports:
         - containerPort: 5000
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://mongo-0.mongo.default.svc.cluster.local:27017/yolomy"
 
 
 ---
