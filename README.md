@@ -1,80 +1,82 @@
-# FINAL IP <K8s>
+# GKE Deployment Setup
 
-## my site is at http://34.35.49.118/
-
-## backend endpoints http://34.35.57.91:5000/api/products
-
-setting the project ID
-
-`gcloud config set project devopsk8s-441011`
+## Website URL
+- **Site URL:** [http://34.35.49.118/](http://34.35.49.118/)
 
 
-Frontend and Backend: These will typically use Deployment objects since they are stateless.
-Database: If your database requires persistent storage, you can use a StatefulSet to ensure each pod gets a unique, stable identity and its own persistent storage. This can be achieved with PersistentVolume and PersistentVolumeClaim.
+### Setting the Google Cloud Project ID
+```bash
+gcloud config set project devopsk8s-441011
+```
 
-# confirming GCP configs
-`gcloud config list`
+### Confirming GCP Configuration
+To check your current GCP configuration:
+```bash
+gcloud config list
+```
 
-<!-- ![alt text](<Screenshot from 2024-11-10 08-13-08.png>) -->
+ ![GCP Configuration](./static/Screenshot%20from%202024-11-10%2008-13-08.png)
 
-![alt text](./static/Screenshot%20from%202024-11-10%2008-13-08.png)
+---
 
-# creating GKE cluster
-`gcloud container clusters create [CLUSTER_NAME] --region [REGION] --project [PROJECT_ID]`
-
-`
+### Creating a GKE Cluster
+To create a GKE cluster, use the following command:
+```bash
 gcloud container clusters create devopsk8scluster --region africa-south1-a --project devopsk8s-441011
-`
-![alt text](./static/Screenshot%20from%202024-11-10%2008-34-15.png)
+```
 
-### cluster credted in the cloud dashboard
+ ![Cluster Creation](./static/Screenshot%20from%202024-11-10%2008-34-15.png)
 
-![alt text](./static/Screenshot%20from%202024-11-10%2008-53-41.png)
+The cluster is now created, as visible in the Cloud Dashboard.
+
+ ![Cluster in Dashboard](./static/Screenshot%20from%202024-11-10%2008-53-41.png)
+
+---
+
+### Installing the Auth Plugin
+To install the required auth plugin for GKE, run the following:
+```bash
+sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin1
+```
+
+### Applying Kubernetes Files
+To apply all files in the `k8s` folder:
+```bash
+kubectl apply -f k8s/
+```
+
+ ![Apply Kubernetes Files](./static/Screenshot%20from%202024-11-10%2008-47-48.png)
+
+After applying, the nodes will be visible in the Kubernetes dashboard.
+
+ ![Nodes in Dashboard](./static/Screenshot%20from%202024-11-10%2008-55-22.png)
+
+---
+
+### Pod Status After Deployment
+After applying the files, the pods are visible in the dashboard. However, the backend pod failed to deploy.
+
+ ![Pod Status](./static/Screenshot%20from%202024-11-10%2008-58-35.png)
+
+To check the status of all pods:
+```bash
+kubectl get pods
+```
+
+ ![Pod Status in Terminal](./static/Screenshot%20from%202024-11-10%2009-22-52.png)
+
+---
+
+### Terminal Setup Structure
+ ![Terminal Setup](./static/Screenshot%20from%202024-11-10%2018-34-41.png)
+
+---
+
+### Website with Added Item
+ ![Item Added](./static/Screenshot%20from%202024-11-10%2018-35-33.png)
 
 
-
-## installing auth-plugin1
-
-`sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin1`
-
-## applying all files in the k8s folder
-`kubectl apply -f k8s/`
-![alt text](./static/Screenshot%20from%202024-11-10%2008-47-48.png)
-### Nodes visible in dashboard
-
-![alt text](./static/Screenshot%20from%202024-11-10%2008-55-22.png)
-
-
-
-
-
-
-
-### pods visible in dashboard after appling them
-Pod status, the backend pod failed to deploy
-![alt text](./static/Screenshot%20from%202024-11-10%2008-58-35.png)
-
-
-
-
-### status of pods
-`kubectl  get pods`
-![alt text](<Screenshot from 2024-11-10 09-22-52.png>)
-
-
-
-
-
-## terminal setup structre
-![alt text](<Screenshot from 2024-11-10 18-34-41.png>)
-
-
-## site with an item added
-![alt text](./static/Screenshot%20from%202024-11-10%2018-35-33.png)
-
-
-
-# IP
+# IP 3
 
 ## Overview
 This project demonstrates the use of Vagrant and Ansible to set up a development environment. It includes instructions for creating a Vagrant file, launching the environment, testing Ansible playbooks, and accessing the project from the host machine.
