@@ -45,11 +45,11 @@ booting up th nginx server
 
 ## building the image
 
-`docker build -t gicheha/ip_frontend:v1.0.0 .`
+`docker build -t gicheha/ip_frontend:v1.0.1 .`
 
 
 ## Pushing the image to docker hub
-`docker push gicheha/ip_frontend:v1.0.0`
+`docker push gicheha/ip_frontend:v1.0.1`
 
 ## running the image locally
 `docker run -p 80:80 gicheha/ip_frontend:v1.0.0`
