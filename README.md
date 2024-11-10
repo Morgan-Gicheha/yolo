@@ -1,4 +1,9 @@
 # FINAL IP <K8s>
+
+## my site is at http://34.35.49.118/
+
+## backend endpoints http://34.35.57.91:5000/api/products
+
 setting the project ID
 
 `gcloud config set project devopsk8s-441011`
@@ -10,8 +15,9 @@ Database: If your database requires persistent storage, you can use a StatefulSe
 # confirming GCP configs
 `gcloud config list`
 
-![alt text](<Screenshot from 2024-11-10 08-13-08.png>)
+<!-- ![alt text](<Screenshot from 2024-11-10 08-13-08.png>) -->
 
+![alt text](./static/Screenshot%20from%202024-11-10%2008-13-08.png)
 
 # creating GKE cluster
 `gcloud container clusters create [CLUSTER_NAME] --region [REGION] --project [PROJECT_ID]`
@@ -19,10 +25,11 @@ Database: If your database requires persistent storage, you can use a StatefulSe
 `
 gcloud container clusters create devopsk8scluster --region africa-south1-a --project devopsk8s-441011
 `
-![alt text](<Screenshot from 2024-11-10 08-34-15.png>)
+![alt text](./static/Screenshot%20from%202024-11-10%2008-34-15.png)
 
 ### cluster credted in the cloud dashboard
-![alt text](<Screenshot from 2024-11-10 08-53-41.png>)
+
+![alt text](./static/Screenshot%20from%202024-11-10%2008-53-41.png)
 
 
 
@@ -30,18 +37,42 @@ gcloud container clusters create devopsk8scluster --region africa-south1-a --pro
 
 `sudo apt-get install google-cloud-sdk-gke-gcloud-auth-plugin1`
 
-##
-applying all files in the k8s folder
+## applying all files in the k8s folder
 `kubectl apply -f k8s/`
-![alt text](<Screenshot from 2024-11-10 08-47-48.png>)
-
+![alt text](./static/Screenshot%20from%202024-11-10%2008-47-48.png)
 ### Nodes visible in dashboard
 
-![alt text](<Screenshot from 2024-11-10 08-55-22.png>)
+![alt text](./static/Screenshot%20from%202024-11-10%2008-55-22.png)
+
+
+
+
+
+
 
 ### pods visible in dashboard after appling them
 Pod status, the backend pod failed to deploy
-![alt text](<Screenshot from 2024-11-10 08-58-35.png>)
+![alt text](./static/Screenshot%20from%202024-11-10%2008-58-35.png)
+
+
+
+
+### status of pods
+`kubectl  get pods`
+![alt text](<Screenshot from 2024-11-10 09-22-52.png>)
+
+
+
+
+
+## terminal setup structre
+![alt text](<Screenshot from 2024-11-10 18-34-41.png>)
+
+
+## site with an item added
+![alt text](./static/Screenshot%20from%202024-11-10%2018-35-33.png)
+
+
 
 # IP
 

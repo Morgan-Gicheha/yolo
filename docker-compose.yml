@@ -6,7 +6,7 @@ services:
       context: ./client
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8210:80"
     networks:
       - ip-5-network
     depends_on:
